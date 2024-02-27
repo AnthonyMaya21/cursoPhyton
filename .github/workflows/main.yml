@@ -29,6 +29,14 @@ jobs:
         uses: actions/checkout@v2
         #Define un paso con el nombre 'Install the Apple certificate
         # and provisioning profile'
+      - name: Debug logs
+        run: |
+          echo -n "BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}"
+          echo -n "P12_PASSWORD: ${{ secrets.P12_PASSWORD }}"
+          echo -n "BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}"
+          echo -n "KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}"
+          
+        # ... otros mensajes de registro según sea necesario
         # Instala el certificado de Apple y el perfil de aprovisionamiento
       - name: Install the Apple certificate and provisioning profile
         # clave que permite definir variables de entorno.

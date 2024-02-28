@@ -29,6 +29,11 @@ jobs:
         uses: actions/checkout@v4
         #Define un paso con el nombre 'Install the Apple certificate
         # and provisioning profile'
+      - name: prueba
+        run: |
+          echo -n "Variable1: ${{ secrets.VARIABLE1 }}"
+          
+          
       - name: Debug logs
         run: |
           echo -n "BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}"

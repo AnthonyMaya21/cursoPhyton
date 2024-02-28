@@ -31,8 +31,8 @@ jobs:
         # and provisioning profile'
       - name: prueba
         run: |
-          #echo -n "Variable1: ${{ secrets.VARIABLE1 }}"
-          KEYCHAIN_PASSWORD: ${{ secrets.VARIABLE1 }}
+          echo -n "Variable1: ${{ secrets.VARIABLE1 }}"
+          #KEYCHAIN_PASSWORD: ${{ secrets.VARIABLE1 }}
           echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
           
       - name: Debug logs
